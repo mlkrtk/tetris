@@ -1,0 +1,20 @@
+deployment:
+  name: tetris
+  replicaCount: 1
+image:
+  repository: 891543987898.dkr.ecr.ap-south-1.amazonaws.com
+  tag: 1
+  containerPort: 3000
+service:
+  type: ClusterIP
+  clusterIPPort: 3000
+resource:
+  cpu:
+    requests: 0.1
+    limit: 0.2
+  memory:
+    requests: 200Mi
+    limit: 300Mi
+environment:
+  env: DEV
+namespace: dev

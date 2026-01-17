@@ -1,0 +1,10 @@
+resource:
+  cpu:
+    requests: 0.3
+    limit: 0.5
+  memory:
+    requests: 500Mi
+    limit: 1Gi
+environment:
+  env: DEV
+namespace: dev
