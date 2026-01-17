@@ -26,9 +26,6 @@ pipeline {
         }
 
         stage('Kubernetes Deploy - DEV') {
-            when {
-                branch 'development'
-            }
             steps {
                 kubernetesEKSHelmDeploy('$dockerImage', '$dockerTag', '$repoName', 'awsCred', 'ap-south-1', 'pe', 'dev')
             }
