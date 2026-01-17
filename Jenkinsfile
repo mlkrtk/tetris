@@ -40,7 +40,7 @@ pipeline {
 
         stage('Update manifests') {
             steps {
-                updateManifest('https://github.com/mlkrtk/argocd-manifests.git', 'develop', 'githubCred', 'develop/tetris/overlays/dev', '$dockerImage', '$dockerTag', '', '', '', '')
+                updateManifest('https://github.com/mlkrtk/argocd-manifests.git', 'develop', 'githubCred', 'develop/tetris/overlays/dev', "$dockerImage", "$dockerTag", '', '', '', '')
             }
         }
     }    
