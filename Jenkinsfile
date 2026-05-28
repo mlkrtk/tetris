@@ -45,10 +45,10 @@ pipeline {
             }
         }
 
-        stage('Update manifests') {
-            steps {
-                updateManifestWithPR('https://github.com/mlkrtk/argocd-manifests.git', 'develop', 'githubCred', 'develop/tetris/overlays/dev', "$dockerImage", "$dockerTag", '', '', '', 'githubToken')
-            }
-        }
+        // stage('Update manifests') {
+        //     steps {
+        //         updateManifestWithPR('https://github.com/mlkrtk/argocd-manifests.git', 'develop', 'githubCred', 'develop/tetris/overlays/dev', "$dockerImage", "$dockerTag", '', '', '', 'githubToken')
+        //     }
+        // }
     }    
 }
