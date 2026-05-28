@@ -16,7 +16,7 @@ pipeline {
 
         stage ('synk code scan'){
             steps{
-                snykCodeScan('$dockerImage', '$dockerTag', 'snykCred', 'snykOrg')
+                snykCodeScan('$dockerImage', '$dockerTag', 'snykCred', '$snykOrg')
             }
         }
 
@@ -28,7 +28,7 @@ pipeline {
 
         stage ('synk image scan'){
             steps {                
-                snykImageScan('$dockerImage', '$dockerTag', 'snykCred', 'snykOrg')
+                snykImageScan('$dockerImage', '$dockerTag', 'snykCred', '$snykOrg')
             }
         }
 
